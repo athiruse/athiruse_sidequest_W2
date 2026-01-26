@@ -65,21 +65,36 @@ function setup() {
 function fireBackground() {
   noStroke();
 
-  fill(255, 200, 0);
-  for (let i = 0; i < 25; i++) {
-    triangle(
-      triangle(width),
-      random(height),
-      triangle(width),
-      random(height),
-      triangle(width),
-      random(height),
-    );
+  //yellow triangles in the back
+  fill(255, 200, 0, 120);
+  let size = 220;
+  let y = height - size;
+
+  for (let x = 0; x < width + size; x += size) {
+    triangle(x, y + size, x + size / 2, y, x + size, y + size);
+  }
+
+  //orange triangles in the back
+  fill(255, 10, 0, 100);
+  let size2 = 180;
+  let y2 = height - size2;
+
+  for (let x2 = 0; x2 < width + size2; x2 += size2) {
+    triangle(x2, y2 + size2, x2 + size2 / 2, y2, x2 + size2, y2 + size2);
+  }
+
+  //red triangles in the back
+  fill(250, 0, 0, 100);
+  let size3 = 110;
+  let y3 = height - size3;
+
+  for (let x3 = 0; x3 < width + size3; x3 += size3) {
+    triangle(x3, y3 + size3, x3 + size3 / 2, y3, x3 + size3, y3 + size3);
   }
 }
 
 function draw() {
-  background(30);
+  background(250);
   fireBackground();
 
   // --- Draw all platforms ---
@@ -171,7 +186,9 @@ function overlap(a, b) {
 
 // Draws the blob using Perlin noise for a soft, breathing effect
 function drawBlobCircle(b) {
-  fill(20, 120, 255);
+  fill(255, 10, 0);
+  stroke(0);
+  strokeWeight(2);
   beginShape();
 
   for (let i = 0; i < b.points; i++) {
@@ -190,6 +207,7 @@ function drawBlobCircle(b) {
   }
 
   endShape(CLOSE);
+  noStroke();
 }
 
 // Jump input (only allowed when grounded)
