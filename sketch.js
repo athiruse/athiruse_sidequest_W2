@@ -10,12 +10,12 @@ let blob3 = {
   // Visual properties
   r: 26, // Base radius
   points: 48, // Number of points used to draw the blob
-  wobble: 7, // Edge deformation amount
+  wobble: 12, // Edge deformation amount
   wobbleFreq: 0.9,
 
   // Time values for breathing animation
   t: 0,
-  tSpeed: 0.01,
+  tSpeed: 0.1,
 
   // Physics: velocity
   vx: 0, // Horizontal velocity
@@ -32,7 +32,7 @@ let blob3 = {
 
   // Friction
   frictionAir: 0.995, // Light friction in air
-  frictionGround: 0.88, // Stronger friction on ground
+  frictionGround: 0.9, // Stronger friction on ground
 };
 
 // List of solid platforms the blob can stand on
@@ -98,7 +98,7 @@ function draw() {
   fireBackground();
 
   // --- Draw all platforms ---
-  fill(200);
+  fill(0);
   for (const p of platforms) {
     rect(p.x, p.y, p.w, p.h);
   }
