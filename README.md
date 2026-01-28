@@ -1,28 +1,16 @@
 ## Project Title
 
-GBDA302 Week 2 Example 3: Platforms (AABB Collisions)
-
----
-
-## Authors
-
-Karen Cochrane and David Han
+Side Quest Week 2: Platforms with Emotions (AABB Collisions)
 
 ---
 
 ## Description
 
-Adds several rectangular platforms. The blob is drawn as a noisy circle but collides using a simple axis-aligned bounding box (AABB). X and Y are resolved separately to keep behaviour predictable and teachable.
+Project has a blob that can jump on the platforms. The user will see a fire-like background, with a raging red blob. The design was inspired by Anger from Inside Out.
 
----
+## Interaction Instructions
 
-## Learning Goals
-
-Learning Goals:
-
-- Convert a circular sprite to an AABB for collision
-- Implement overlap test and push-out resolution
-- Manage grounded state only when landing on top faces
+The player can jump on the platform using the up arrow and space bar. The player can move left using the left arrow key or A, and to move to the right they can use the right arrow key or D.
 
 ---
 
@@ -32,8 +20,6 @@ N/A
 
 ---
 
-## GenAI
+## References
 
-The code was written by Dr. Karen Cochrane but she used GenAI to write the comments.
-
----
+N/A
